@@ -1,0 +1,2 @@
+{:api {"hello" {:authorization :anonymous, :handler handler.core/hello}
+       "calc" {:authorization :anonymous, :handler handler.core/calc}}}
