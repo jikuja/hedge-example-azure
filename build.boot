@@ -12,7 +12,7 @@
 
 
 
-(require '[boot-hedge.aws :refer :all])
+(require '[boot-hedge.core :refer :all])
 (require '[crisptrutski.boot-cljs-test :refer [test-cljs report-errors!] :as cljs-test])
 
 (deftask testing [] (set-env! :source-paths #(conj % "test")) identity)

@@ -35,7 +35,7 @@ plugins:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: target/handler_core__hello/index.handler
     events:
       - http: true
         x-azure-settings:
@@ -43,7 +43,37 @@ functions:
       - http: true
         x-azure-settings:
           direction: out
-          name: res
+          name: "$return"
+  hello-json:
+    handler: target/handler_core__hello-json/index.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: "$return"
+  calc:
+    handler: target/handler_core__calc/index.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: "$return"
+  fail-hard:
+    handler: target/handler_core__fail-hard/index.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: "$return"
 
 # The following are a few examples of other events you can configure:
 #
