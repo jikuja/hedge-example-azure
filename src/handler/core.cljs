@@ -1,5 +1,7 @@
 (ns handler.core
-  (:require [cljs.nodejs]))
+  (:require [cljs.nodejs]
+            [cljs.core.async :refer [chan]])
+  (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (def operators {"+" +
                 "-" -
@@ -33,6 +35,14 @@
 
 (defn hello
   [req]
-  (println "req in the handler") 
-  (println req)
   "hello!")
+
+(defn hello-json
+  [req]
+  {:body {:key1 "value1" :key2 2}})
+
+(defn fail-hard
+  [req]
+  (go
+    (throw (js/Error. "Fail hard! Hedge does not catch this? And AWS/Azure does not handle this properly"))
+    "Fake return value which should be handled by hedge."))
