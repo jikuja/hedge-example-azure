@@ -1,16 +1,13 @@
 'use strict';
 
-module.exports.hello = (event, context, callback) => {
+module.exports.hello = (context, req) => {
   const response = {
-    statusCode: 200,
+    status: 200,
     body: JSON.stringify({
       message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
+      input: req,
     }),
   };
 
-  callback(null, response);
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
+  context.done(null, response);
 };
