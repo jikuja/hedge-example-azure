@@ -8,6 +8,8 @@
                 "*" *
                 "/" /})
 
+(def leftpad (cljs.nodejs/require "leftpad"))
+
 (defn extract-query-parameter
   "Extracts query parameter from req. Returns nil if querystring or parameter is empty"
   ([req parameter default]
@@ -39,7 +41,7 @@
 
 (defn hello-json
   [req]
-  {:body {:key1 "value1" :key2 2}})
+  {:body {:key1 "value1" :key2 (leftpad 42 5)}})
 
 (defn fail-hard
   [req]

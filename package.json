@@ -1,13 +1,17 @@
 {
-  "name": "azure-nodejs",
+  "name": "hedge-example-azure",
   "version": "1.0.0",
-  "description": "Azure Functions sample for the Serverless framework",
-  "main": "handler.js",
   "keywords": [
     "azure",
-    "serverless"
+    "serverless",
+    "hedge"
   ],
+  "dependencies": {
+    "leftpad": "^0.0.1",
+    "xhr2": "^0.1.4"
+  },
   "devDependencies": {
-    "serverless-azure-functions": "*"
+    "serverless-azure-functions": "^0.4.0",
+    "serverless-hedge-plugin": "^0.0.1"
   }
 }

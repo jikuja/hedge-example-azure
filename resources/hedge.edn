@@ -1,4 +1,0 @@
-{:api {"hello" {:authorization :anonymous, :handler handler.core/hello}
-       "hello-json" {:authorization :anonymous, :handler handler.core/hello-json}
-       "calc" {:authorization :anonymous, :handler handler.core/calc}
-       "fail-hard" {:authorization :anonymous, :handler handler.core/fail-hard}}}

@@ -23,6 +23,7 @@ provider:
 
 plugins:
   - serverless-azure-functions
+  - serverless-hedge-plugin
 
 # you can add packaging information here
 #package:
@@ -35,7 +36,7 @@ plugins:
 
 functions:
   hello:
-    handler: target/handler_core__hello/index.handler
+    hedge: handler.core/hello
     events:
       - http: true
         x-azure-settings:
@@ -45,7 +46,7 @@ functions:
           direction: out
           name: "$return"
   hello-json:
-    handler: target/handler_core__hello-json/index.handler
+    hedge: handler.core/hello-json
     events:
       - http: true
         x-azure-settings:
@@ -55,7 +56,7 @@ functions:
           direction: out
           name: "$return"
   calc:
-    handler: target/handler_core__calc/index.handler
+    hedge: handler.core/calc
     events:
       - http: true
         x-azure-settings:
@@ -65,7 +66,7 @@ functions:
           direction: out
           name: "$return"
   fail-hard:
-    handler: target/handler_core__fail-hard/index.handler
+    hedge: handler.core/fail-hard
     events:
       - http: true
         x-azure-settings:
@@ -74,6 +75,16 @@ functions:
         x-azure-settings:
           direction: out
           name: "$return"
+  vanilla-js:
+   handler: vanillajs.hello
+   events:
+     - http: true
+       x-azure-settings:
+         authLevel : anonymous
+     - http: true
+       x-azure-settings:
+         direction: out
+         name: "$return"
 
 # The following are a few examples of other events you can configure:
 #
