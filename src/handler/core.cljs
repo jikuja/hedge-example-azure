@@ -41,7 +41,8 @@
 
 (defn hello-json
   [req]
-  {:body {:key1 "value1" :key2 (leftpad 42 5)}})
+  (go
+    {:body {:key1 "value1" :key2 (leftpad 42 5)}}))
 
 (defn fail-hard
   [req]
