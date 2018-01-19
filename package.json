@@ -1,6 +1,6 @@
 {
   "name": "hedge-example-azure",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "keywords": [
     "azure",
     "serverless",
@@ -9,9 +9,5 @@
   "dependencies": {
     "leftpad": "^0.0.1",
     "xhr2": "^0.1.4"
-  },
-  "devDependencies": {
-    "serverless-azure-functions": "^0.4.0",
-    "serverless-hedge-plugin": "next"
   }
 }

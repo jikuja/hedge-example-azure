@@ -1,0 +1,4 @@
+{:api {"hello" {:handler handler.core/hello} 
+       "hello-json" {:handler handler.core/hello-json} 
+       "calc" {:handler handler.core/calc} 
+       "fail-hard" {:handler handler.core/fail-hard}}}

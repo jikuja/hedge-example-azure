@@ -2,10 +2,5 @@
 node_modules
 jspm_packages
 
-# Serverless directories
-.serverless
-functions
-
 # Hedge
-resources
 target
