@@ -1,14 +1,11 @@
 (ns handler.core
-  (:require [cljs.nodejs]
-            [cljs.core.async :refer [chan]])
+  (:require [cljs.nodejs])
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (def operators {"+" +
                 "-" -
                 "*" *
                 "/" /})
-
-(def leftpad (cljs.nodejs/require "leftpad"))
 
 (defn extract-query-parameter
   "Extracts query parameter from req. Returns nil if querystring or parameter is empty"
