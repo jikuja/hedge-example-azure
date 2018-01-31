@@ -1,4 +1,10 @@
-# Hedge example project for AWS
+# Deprecated
+
+One example repository contains both cloud. See https://github.com/jikuja/hedge-example-aws
+
+------
+
+# Hedge example project for Azure
 
 Refer [Hedge documentation](https://github.com/siilisolutions/hedge/) for detailed information.
 
